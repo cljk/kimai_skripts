@@ -1,6 +1,6 @@
 
 -- alle Benutzer auf anderen Skin umstellen
-delete from kimai_preferences;
+delete from kimai_preferences where option = "ui.skin";
 
 insert into kimai_preferences (userID, option, value) 
 	select userID, "ui.skin", "ecPool" from kimai_users;
